@@ -1,0 +1,23 @@
+{
+  "name": "@bs-oak/svg",
+  "version": "0.1.0",
+  "sources": {
+    "dir" : "src",
+    "subdirs" : true
+  },
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bs-dependencies": [
+    "@bs-oak/html",
+    "@bs-oak/json",
+    "@bs-oak/virtual-dom"
+  ],
+  "warnings": {
+    "error" : "+101"
+  },
+  "refmt": 3
+}
