@@ -1,15 +1,8 @@
-module Encode = BsOakJson.Encode
-module Html = BsOakHtml.Html
-module VNode = BsOakVirtualDom.Virtual_dom.Node
-module VProp = BsOakVirtualDom.Virtual_dom.Property
+type 'a t = 'a BsOakVirtualDom.Virtual_dom.Node.t
 
-type 'a t = 'a VNode.t
-
-let text = VNode.text
-let node tag properties children = 
-  let namespace = VProp.create "namespace" (Encode.string "http://www.w3.org/2000/svg") in
-  VNode.node tag (namespace :: properties) children
-let map = VNode.map
+let text = BsOakVirtualDom.Virtual_dom.Node.text
+let node tag attributes children = BsOakVirtualDom.Virtual_dom.Node.node_ns "http://www.w3.org/2000/svg" tag attributes children
+let map = BsOakVirtualDom.Virtual_dom.Node.map
 
 (* html embedding *)
 
@@ -114,3 +107,7 @@ let cursor p c = node "cursor" p c
 let filter p c = node "filter" p c
 let style p c = node "style" p c
 let view p c = node "view" p c
+
+(* Keyed Nodes *)
+
+let keyed_node = BsOakVirtualDom.Virtual_dom.Node.keyed_node

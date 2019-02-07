@@ -1,4 +1,4 @@
-type 'a t = 'a BsOakVirtualDom.Virtual_dom.Property.t
+type 'a t = 'a BsOakVirtualDom.Virtual_dom.Attribute.t
 
 (* regular attributes *)
 
@@ -258,3 +258,18 @@ val unicode_bidi : string -> 'a t
 val visibility : string -> 'a t
 val word_spacing : string -> 'a t
 val writing_mode : string -> 'a t
+
+(* events - mouse *)
+
+val on_click : 'a -> 'a t
+val on_mouse_down : 'a -> 'a t
+val on_mouse_up : 'a -> 'a t
+val on_mouse_over : 'a -> 'a t
+val on_mouse_out : 'a -> 'a t
+
+(* events - custom *)
+
+val on : string -> 'a BsOakJson.Decode.decoder -> 'a t
+val prevent_default_on : string -> ('a * bool) BsOakJson.Decode.decoder -> 'a t
+val stop_propagation_on : string -> ('a * bool) BsOakJson.Decode.decoder -> 'a t
+val custom : string -> 'a BsOakVirtualDom.Virtual_dom.Attribute.options BsOakJson.Decode.decoder -> 'a t

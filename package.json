@@ -15,8 +15,8 @@
     "bs-platform": "^4.0.18"
   },
   "dependencies": {
-    "@bs-oak/html": "^0.1.20",
+    "@bs-oak/html": "^0.3.0",
     "@bs-oak/json": "^0.1.5",
-    "@bs-oak/virtual-dom": "^0.2.0"
+    "@bs-oak/virtual-dom": "^0.5.1"
   }
 }
