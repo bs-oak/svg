@@ -1,6 +1,6 @@
 {
   "name": "@bs-oak/svg",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "sources": {
     "dir" : "src",
     "subdirs" : true
